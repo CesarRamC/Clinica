@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package clinica.controller;
 
 import clinica.model.Pacientes;
@@ -92,13 +89,11 @@ public class RegistroController extends Controller implements Initializable {
         listaTipoUsuario.addAll("Paciente", "Médico");
         cbxTipoUsuario.setItems(listaTipoUsuario);
         usuarioService = new UsuarioService();
-        personaService = new PersonaService(); 
-               
+        personaService = new PersonaService();                
     }
 
     @Override
     public void initialize() {
-
     }
     
     private boolean validarCampos() {
@@ -169,7 +164,6 @@ public class RegistroController extends Controller implements Initializable {
     return true;
 }
     
-
     @FXML
     private void onAction_Registrar(ActionEvent event) {
         Mensaje.showAndWait("DEBUG", "Click", "onAction_Registrar invocado");
@@ -202,15 +196,13 @@ public class RegistroController extends Controller implements Initializable {
         
         personaService.guardarPersona(personaDto, usuarioDto);              
         //FlowController.getInstance().goView("InicioSesion"); 
-        
-        
+                
         Mensaje.showAndWait("Éxito", "Registro", "Usuario, Persona y " +cbxTipoUsuario.getValue()  + " guardados correctamente.");
 
     // Limpia el formulario
     limpiarFormulario();
                 
-    }
-          
+    }          
 
     //En realidad no se elimina, sino que se le modifica el estado a Inactivo
     @FXML

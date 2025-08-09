@@ -47,7 +47,7 @@ private final EntityManager em = EntityManagerHelper.getInstance().getManager();
         }
     }
 
-    //Desactivar un médico
+        //Desactivar un médico
     public boolean desctivarMedico(Long id) {
         try {
             Medicos m = em.find(Medicos.class, id);

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package clinica.service;
 
 import clinica.model.Pacientes;
@@ -15,7 +12,6 @@ import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
 import javax.persistence.Query;
 import javafx.scene.control.Alert;
-
 
 /**
  *
@@ -50,7 +46,7 @@ public class PacientesService {
         }
     }
      
-    // Lista todos los pacientes 
+        // Listar todos los pacientes 
     public List<Pacientes> listarTodos() {
         try {
             return em.createNamedQuery("Pacientes.findAll", Pacientes.class).getResultList();

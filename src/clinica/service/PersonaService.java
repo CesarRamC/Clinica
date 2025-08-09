@@ -23,10 +23,8 @@ public class PersonaService {
     private EntityTransaction et;
     UsuarioService usuarioService;
     
-
     public PersonaService() {
-        
-       
+               
     }
 
      public void guardarPersona(PersonaDto personaDto, UsuarioDto usuarioDto) {
@@ -54,7 +52,6 @@ public class PersonaService {
             System.out.println("service:   " + ex);
             Mensaje.show(Alert.AlertType.ERROR, "ERROR", "Ocurrio un error al guardar el usuario.");
         }
-    }
-    
+    }    
     
 }
