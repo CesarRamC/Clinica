@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="670.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinica.controller.InicioController">
+   <children>
+      <VBox fx:id="vb_opciones" prefHeight="633.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btn_iniciarSesion" onAction="#onAction_iniciarSesion" text="INICIAR SESIÓN" />
+            <Button fx:id="btn_registrar" onAction="#onAction_registrar" text="REGISTRAR" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

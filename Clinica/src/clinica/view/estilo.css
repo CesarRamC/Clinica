@@ -1,0 +1,181 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/12/2024, 07:56:35 AM
+    Author     : Ivannia Rojas
+*/
+
+*{
+    -fx-text-fill: black;
+    -fx-font: 12pt "System" ;
+    -fx-color-progress-bar: #13286b ;
+  
+}
+.root{
+  
+    -fx-background-color:linear-gradient(to bottom,whitesmoke,#2b7ac9);
+/*   -fx-background-color: linear-gradient(to , #9966ff , #6699ff)#6699ff*/
+}
+#jfxPb_progreso > .bar{
+    -fx-background-color: linear-gradient(-fx-color-progress-bar 1%,  black 100%);/* #333333 2%,  black 95%*/
+}
+.jfx-progress-bar > .bar{
+    -fx-background-color:#66cc00;
+}
+
+/*fondo principal de toda la aplicación*/
+/*#st_base > ImageView{
+    -fx-Image: url("../resources/fondo7.jpg")
+   
+}*/
+/*celda verde oscuro*/
+.primerCelda{
+    -fx-background-color: #3a9989;
+}
+/*celda verde medio*/
+.segundaCelda{
+   -fx-background-color: #64ab9e; 
+}
+/*celda verde claro*/
+.tecerCelda{
+    -fx-background-color: #84c4b8;
+}
+/*celda morada*/
+.cuartaCelda{
+    -fx-background-color: #8742af;
+}
+.st_fondo{
+    -fx-background-color:black;
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-opacity: 0.80;
+}
+
+
+#hb_tutorial > VBox{
+    -fx-background-color: #666666;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+#jfxTxt_info{
+    -fx-text-fill: white;
+    -fx-font: bold 10pt "System" ; 
+}
+.button{
+    -fx-text-fill:white;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: linear-gradient(  #006D73 1%,  #006D73 95%);/* #999999 2%,  black 95%  #003399  #0000ff*/
+    -fx-pref-height: 43px; 
+    -fx-pref-width: 225px; 
+   
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(   #A57F00 1%,  #A57F00 95%);/* #999999 2%,  black 95%*/
+   
+}
+
+.labelEstilo{
+     -fx-text-fill: black;
+    -fx-font: 20pt "System" ;
+    -fx-background-color: whitesmoke;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 50px; 
+    -fx-pref-width: 400px;
+   
+    
+}
+.labelEstilo:hover{
+    -fx-background-color: #3366ff;
+    
+}
+.textAreaEstilo{
+     -fx-text-fill: black;
+    -fx-font: bold 10pt "System" ;
+    -fx-background-color: whitesmoke;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-pref-height: 185px; 
+    -fx-pref-width: 382px;
+}
+#text_reglas{
+    -fx-text-fill: white;
+    -fx-font: bold 10pt "System" ;
+   
+}
+.jfx-check-box {
+   -jfx-checked-color: #003399;
+   -jfx-unchecked-color:#003399;
+}
+
+.jfx-radio-button{
+   /* -fx-text-fill: -fx-base-color-radio-button-tf;
+    -fx-background-color: transparent;*/
+    -jfx-selected-color: #003399;
+}
+
+
+.jfx-list-view{
+   -fx-background-color: black;
+    -fx-opacity: 0.8;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-text-fill: white;
+     -fx-background-color: #13286b;
+}
+
+
+.jfx-text-field{
+    -fx-alignment: center;
+    -jfx-focus-color:#13286b;
+    -jfx-unfocus-color:black;
+    -fx-text-fill: black;
+    /*-fx-font-size: ;*/
+}
+
+.botonesPregunta{
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: linear-gradient(  #003333 1%,  black 95%);/* #999999 2%,  black 95%  #003399  #0000ff*/
+
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font: bold 10pt "System" ;
+     -fx-pref-height: 60px; 
+    -fx-pref-width: 200px; 
+    -fx-border-color: black;
+}
+.botonesPregunta:hover{
+    -fx-background-color: linear-gradient(   #9044b0 1%,  black 95%);/* #999999 2%,  black 95%*/
+}
+
+.cartaInicio{
+    -fx-text-fill: whitesmoke;
+    -fx-font: bold 10pt "System" ;
+}
+.cartaPregunta{
+    -fx-text-fill: black;
+    -fx-font: bold 10pt "System" ;
+}
+
+
+.tilepane > ImageView{
+     -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+.botonTipo{
+    -fx-border-width: 1px;
+     -fx-border-color: black;
+}
+.tituloLabel{
+    -fx-text-fill: whitesmoke;
+    -fx-font: 10pt "System" ;
+    
+}
