@@ -77,10 +77,5 @@ public class MenuController extends Controller implements Initializable  {
     @FXML
     private void onAction_buscarCita(ActionEvent event) {
     }
-    
-    
-
-     
-
 
 }

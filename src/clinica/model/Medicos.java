@@ -120,5 +120,9 @@ public class Medicos implements Serializable {
     public String toString() {
         return "clinica.model.Medicos[ medId=" + medId + " ]";
     }
+
+    public void setMedVersion(long l) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
