@@ -51,4 +51,8 @@ public static void showImage(AlertType tipo,String titulo,String mensaje) {
         Optional<ButtonType>result=alert.showAndWait();
         return result.get()==ButtonType.OK;
     }
+
+    public static void showAndWait(String validación, String nombre_inválido, String el_nombre_debe_tener_entre_3_y_100_caract) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
