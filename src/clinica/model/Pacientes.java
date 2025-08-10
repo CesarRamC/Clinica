@@ -60,7 +60,11 @@ public class Pacientes implements Serializable {
         this.pacId = pacId;
         this.pacVersion = pacVersion;
     }
-
+    
+    public Pacientes(PacientesDto pacientesdto) {   
+    }
+    
+   
     public Long getPacId() {
         return pacId;
     }
