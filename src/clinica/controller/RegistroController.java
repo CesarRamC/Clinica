@@ -183,8 +183,8 @@ public class RegistroController extends Controller implements Initializable {
         persona.setCliNombreCompleto(txfNombreCompleto.getText());
         persona.setCliCedula(txfCedula.getText());
         persona.setCliTelefono(txfTelefono.getText());
-        persona.setCliGenero(cbxGenero.getValue());
-        //persona.setCliCorreoElectronico(txtCorreoElectronico.getText());
+        //persona.setCliGenero(cbxGenero.getValue());
+        persona.setCliCorreoElectronico(txtCorreoElectronico.getText());
         //LocalDate fecha = LocalDate.now();
         //persona.setCliAnioNacimiento(Date.from(fecha.atStartOfDay(ZoneId.systemDefault()).toInstant()));
         int anio = Integer.parseInt(txfAnioNacimiento.getText());

@@ -21,19 +21,14 @@ import javafx.scene.control.Alert;
  */
 public class CitaService {
     
-private final EntityManager em = EntityManagerHelper.getInstance().getManager();
+    EntityManager em = EntityManagerHelper.getInstance().getManager();
     private EntityTransaction et;
 
     public CitaService() { }
 
     
     public Cita guardarCita(Cita cita) {
-        try { // revisar si hay conflicto de cita para el médico en fecha/hora
-            //if (existeConflictoMedico(cita.getCitIdMedico(), cita.getCitFecha(), cita.getCitHora())) {
-           // Mensaje.show(Alert.AlertType.WARNING, "ATENCIÓN", "El médico ya tiene una cita en esa fecha y hora.");
-            //return null;
-            //}
-
+        try { 
             et = em.getTransaction();
             et.begin();
             em.persist(cita);
@@ -108,6 +103,7 @@ private final EntityManager em = EntityManagerHelper.getInstance().getManager();
     }
 
         // Listar todas las citas
+    /*
     public List<Cita> listarTodas() {
         try {
             return em.createQuery("SELECT c FROM Cita c ORDER BY c.citFecha, c.citHora", Cita.class)
@@ -162,6 +158,6 @@ private final EntityManager em = EntityManagerHelper.getInstance().getManager();
             Mensaje.show(Alert.AlertType.ERROR, "ERROR", "Ocurrió un error al listar las citas por fecha.");
             return null;
         }
-    }     
+    }    */ 
     
 }
