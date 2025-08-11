@@ -46,7 +46,7 @@ public class PacientesService {
         }
     }
      
-        // Listar todos los pacientes 
+        // Metodo Opcional. Listar todos los pacientes 
     public List<Pacientes> listarTodos() {
         try {
             return em.createNamedQuery("Pacientes.findAll", Pacientes.class).getResultList();
