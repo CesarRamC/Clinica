@@ -5,7 +5,7 @@ import clinica.model.Pacientes;
 import clinica.model.Medicos;
 import clinica.model.Persona;
 import clinica.model.PersonaDto;
-import clinica.model.Usuario;
+import clinica.model.Usuario;    
 import clinica.model.UsuarioDto;
 import clinica.service.PacientesService;
 import clinica.service.MedicosService;
@@ -166,8 +166,8 @@ public class RegistroController extends Controller implements Initializable {
     
     @FXML
     private void onAction_Registrar(ActionEvent event) {
-        Mensaje.showAndWait("DEBUG", "Click", "onAction_Registrar invocado");
-        if (!validarCampos()) return;
+        
+        //if (!validarCampos()) return;
         usuario = new Usuario();
         persona = new Persona();
   
@@ -225,7 +225,7 @@ public class RegistroController extends Controller implements Initializable {
     if (cbxGenero != null) cbxGenero.getSelectionModel().clearSelection();
     if (cbxTipoUsuario != null) cbxTipoUsuario.getSelectionModel().clearSelection();
 
-    // Deja el foco en el primer campo
+    // Se coloca en el primer campo para registrar
     txfNombreCompleto.requestFocus();
     }
 
