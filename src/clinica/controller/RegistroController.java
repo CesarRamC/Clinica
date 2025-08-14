@@ -11,18 +11,12 @@ import clinica.service.PacientesService;
 import clinica.service.MedicosService;
 import clinica.service.PersonaService;
 import clinica.service.UsuarioService;
-import clinica.util.EntityManagerHelper;
-import clinica.util.FlowController;
 import clinica.util.Mensaje;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.ResourceBundle;
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -169,7 +163,7 @@ public class RegistroController extends Controller implements Initializable {
         
         //if (!validarCampos()) return;
         usuario = new Usuario();
-        persona = new Persona();
+        //persona = new Persona();
   
         usuario.setUsuUsuario(txfUsuario.getText());
         usuario.setUsuContrasena(txfContrasena.getText());
@@ -178,23 +172,24 @@ public class RegistroController extends Controller implements Initializable {
         
         String generoSel = cbxGenero.getValue(); // "Mujer", "Hombre", "Otro"
         String genero1 = generoSel.substring(0,1).toUpperCase(); // "M", "H", "O"
-        persona.setCliGenero(genero1);
+        //persona.setCliGenero(genero1);
         
-        persona.setCliNombreCompleto(txfNombreCompleto.getText());
-        persona.setCliCedula(txfCedula.getText());
-        persona.setCliTelefono(txfTelefono.getText());
+        //persona.setCliNombreCompleto(txfNombreCompleto.getText());
+        //persona.setCliCedula(txfCedula.getText());
+        //persona.setCliTelefono(txfTelefono.getText());
         //persona.setCliGenero(cbxGenero.getValue());
-        persona.setCliCorreoElectronico(txtCorreoElectronico.getText());
+       // persona.setCliCorreoElectronico(txtCorreoElectronico.getText());
         //LocalDate fecha = LocalDate.now();
         //persona.setCliAnioNacimiento(Date.from(fecha.atStartOfDay(ZoneId.systemDefault()).toInstant()));
         int anio = Integer.parseInt(txfAnioNacimiento.getText());
         LocalDate fecha = LocalDate.of(anio, 1, 1); // Convertir solo el año
-        persona.setCliAnioNacimiento(Date.from(fecha.atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        //persona.setCliAnioNacimiento(Date.from(fecha.atStartOfDay(ZoneId.systemDefault()).toInstant()));
         
-        persona.setCliIdUsuario(usuario);
-        personaDto = new PersonaDto(persona);
+        //persona.setCliIdUsuario(usuario);
+        //personaDto = new PersonaDto(persona);
         
-        personaService.guardarPersona(personaDto, usuarioDto);              
+        personaService.guardarPersona(personaDto, usuarioDto); 
+        
         //FlowController.getInstance().goView("InicioSesion"); 
                 
         Mensaje.showAndWait("Éxito", "Registro", "Usuario, Persona y " +cbxTipoUsuario.getValue()  + " guardados correctamente.");

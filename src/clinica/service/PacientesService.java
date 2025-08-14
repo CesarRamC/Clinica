@@ -46,17 +46,7 @@ public class PacientesService {
         }
     }
      
-        // Metodo Opcional. Listar todos los pacientes 
-    public List<Pacientes> listarTodos() {
-        try {
-            return em.createNamedQuery("Pacientes.findAll", Pacientes.class).getResultList();
-        } catch (Exception ex) {
-            System.out.println("PacientesService.listarTodos: " + ex);
-            Mensaje.show(Alert.AlertType.ERROR, "ERROR", "Ocurrió un error al listar los pacientes.");
-            return null;
-        }
-    }
-
+        
         //Desactivar un paciente
     public boolean desactivarPaciente(Long id) {
         try {

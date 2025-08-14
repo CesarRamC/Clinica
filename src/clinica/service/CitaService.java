@@ -61,7 +61,7 @@ public class CitaService {
         }
     }
 
-        //Eliminar una cita por su ID
+        //Eliminar una cita por ID
     public boolean eliminarCita(Long id) {
         try {
             Cita c = em.find(Cita.class, id);
@@ -83,24 +83,5 @@ public class CitaService {
         }
     }
 
-        //Buscar una cita
-    public Cita buscarPorCodigo(String codigo) {
-        try {
-            Query q = em.createQuery("SELECT c FROM Cita c WHERE c.citCodigo = :codigo", Cita.class);
-            q.setParameter("codigo", codigo);
-            return (Cita) q.getSingleResult();
-        } catch (NoResultException ex) {
-            Mensaje.show(Alert.AlertType.WARNING, "ATENCIÓN", "No existe una cita con ese código.");
-            return null;
-        } catch (NonUniqueResultException ex) {
-            Mensaje.show(Alert.AlertType.ERROR, "ERROR", "Existe más de una cita con el mismo código.");
-            return null;
-        } catch (Exception ex) {
-            System.out.println("CitaService.buscarPorCodigo: " + ex);
-            Mensaje.show(Alert.AlertType.ERROR, "ERROR", "Ocurrió un error al consultar la cita por código.");
-            return null;
-        }
-    }
-
-          
+                 
 }
